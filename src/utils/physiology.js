@@ -1,8 +1,8 @@
 export const DEFAULT_QUALITIES =[
-  { id: 'vo2max', name: 'VO2max', g: 5, o: 3, impacts: [{ id: 'seuil', ratio: 0.6 }, { id: 'ef', ratio: 0.4 }, { id: 'leg', ratio: 0.3 }, { id: 'co2', ratio: 0.3 }, { id: 'plyo', ratio: 0.3 }] },
-  { id: 'seuil', name: 'Seuil', g: 6, o: 3, impacts: [{ id: 'vo2max', ratio: 0.2 }, { id: 'ef', ratio: 0.4 }, { id: 'leg', ratio: 0.2 }, { id: 'co2', ratio: 0.2 }, { id: 'plyo', ratio: 0.1 }] },
+  { id: 'vo2max', name: 'VO2max', g: 5, o: 3, impacts: [{ id: 'seuil', ratio: 0.6 }, { id: 'ef', ratio: 0.3 }, { id: 'leg', ratio: 0.4 }, { id: 'co2', ratio: 0.4 }, { id: 'plyo', ratio: 0.4 }] },
+  { id: 'seuil', name: 'Seuil', g: 6, o: 3, impacts: [{ id: 'vo2max', ratio: 0.3 }, { id: 'ef', ratio: 0.3 }, { id: 'leg', ratio: 0.3 }, { id: 'co2', ratio: 0.4 }, { id: 'plyo', ratio: 0.2 }] },
   { id: 'ef', name: 'Endurance Fondamentale', g: 8, o: 4, impacts: [{ id: 'leg', ratio: 0.2 }, { id: 'co2', ratio: 0.2 }] },
-  { id: 'sprint', name: 'Sprint / Alactique', g: 4, o: 2, impacts: [{ id: 'seuil', ratio: 0.2 }, { id: 'vo2max', ratio: 0.2 }, { id: 'ef', ratio: 0.2 }, { id: 'leg', ratio: 0.8 }, { id: 'plyo', ratio: 0.8 }, { id: 'co2', ratio: 0.6 }] },
+  { id: 'sprint', name: 'Sprint / Alactique', g: 4, o: 2, impacts: [{ id: 'seuil', ratio: 0.4 }, { id: 'vo2max', ratio: 0.4 }, { id: 'ef', ratio: 0.1 }, { id: 'leg', ratio: 0.8 }, { id: 'plyo', ratio: 0.8 }, { id: 'co2', ratio: 0.6 }] },
   { id: 'pull', name: 'Musculation Pull', g: 5, o: 3 },
   { id: 'push', name: 'Musculation Push', g: 5, o: 3 },
   { id: 'leg', name: 'Musculation Leg', g: 5, o: 3 },
