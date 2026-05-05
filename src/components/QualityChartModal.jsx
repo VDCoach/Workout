@@ -67,7 +67,7 @@ export default function QualityChartModal({ quality, events, onClose }) {
            </button>
         </div>
         
-        <div className="h-[350px] w-full">
+        <div className="h-[350px] w-full min-h-[300px]">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={chartData} margin={{ top: 5, right: 5, left: -20, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />

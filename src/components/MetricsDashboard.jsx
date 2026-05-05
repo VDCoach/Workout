@@ -126,7 +126,7 @@ export default function MetricsDashboard({ events, dailyMetrics }) {
         {/* GRAPHIQUE 1 */}
         <div className="flex flex-col h-full bg-white/5 border border-white/10 rounded-2xl p-4 min-h-0 relative">
           <p className="text-[10px] text-slate-500 uppercase font-bold mb-2 shrink-0">Load Fatigue Analysis (Banister)</p>
-          <div className="flex-1 w-full min-h-0 relative">
+          <div className="flex-1 w-full min-h-[150px] relative">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={chartData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
                 <defs>
@@ -155,7 +155,7 @@ export default function MetricsDashboard({ events, dailyMetrics }) {
         {/* GRAPHIQUE 2 */}
         <div className="flex flex-col h-full bg-white/5 border border-white/10 rounded-2xl p-4 min-h-0 relative">
           <p className="text-[10px] text-slate-500 uppercase font-bold mb-2 shrink-0">VFC Recovery Trends (HRV)</p>
-          <div className="flex-1 w-full min-h-0 relative">
+          <div className="flex-1 w-full min-h-[150px] relative">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={chartData} margin={{ top: 5, right: 5, left: -25, bottom: 0 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
