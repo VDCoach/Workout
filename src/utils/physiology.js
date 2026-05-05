@@ -56,9 +56,9 @@ export function computeCellState(qDef, targetDateStr, eventsForQuality, readines
         load = data * 5;
       }
       
-      // On considère qu'une charge de 1200 est notre 100% avec la nouvelle formule non-linéaire.
+      // On considère qu'une charge de 1000 est notre 100% avec la nouvelle formule non-linéaire.
       // On cap l'intensité max à 1.2 (120%) pour éviter des durées aberrantes.
-      const intensity = Math.min(load / 1200, 1.2); 
+      const intensity = Math.min(load / 1000, 1.2); 
       
       // ALGORITHME DE DIFFUSION ELARGIE
       // Un exposant de 1.3 lisse légèrement la distribution de l'effet
