@@ -13,9 +13,14 @@ export default function ScoreModal({ info, qualities, onClose, onSave }) {
   const qDef = qualities.find(q => q.id === info.qId);
   const hasImpacts = qDef && qDef.impacts && qDef.impacts.length > 0;
 
-  // La charge (Load) est calculée sur la moyenne des deux RPE pondérée par la durée
-  const load = rpeMusc && rpeCardio && duration 
-    ? Math.round(((Number(rpeMusc) + Number(rpeCardio)) / 2) * Number(duration)) 
+  
+  // La charge de base utilise un exposant (1.5) sur le RPE moyen pour casser la linéarité.
+  // La fatigue perçue (si renseignée) agit comme un multiplicateur (de x0.6 à x1.5).
+  const load = (rpeMusc && rpeCardio && duration)
+    ? Math.round(
+        (Number(duration) * Math.pow((Number(rpeMusc) + Number(rpeCardio)) / 2, 1.5)) *
+        (fatigue ? 0.5 + (Number(fatigue) / 10) : 1) // Facteur x1 si fatigue est vide
+      )
     : 0;
 
   const handleSubmit = (e) => {
