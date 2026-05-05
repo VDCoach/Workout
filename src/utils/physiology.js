@@ -2,10 +2,10 @@ export const DEFAULT_QUALITIES =[
   { id: 'vo2max', name: 'VO2max', g: 4, o: 3, impacts: [{ id: 'seuil', ratio: 0.6 }, { id: 'ef', ratio: 0.4 }, { id: 'leg', ratio: 0.4 }, { id: 'co2', ratio: 0.4 }, { id: 'plyo', ratio: 0.4 }] },
   { id: 'seuil', name: 'Seuil', g: 5, o: 3, impacts: [{ id: 'vo2max', ratio: 0.3 }, { id: 'ef', ratio: 0.4 }, { id: 'leg', ratio: 0.3 }, { id: 'co2', ratio: 0.3 }, { id: 'plyo', ratio: 0.2 }] },
   { id: 'ef', name: 'Endurance Fondamentale', g: 7, o: 4, impacts: [{ id: 'leg', ratio: 0.2 }, { id: 'co2', ratio: 0.2 }] },
-  { id: 'sprint', name: 'Sprint / Alactique', g: 4, o: 2, impacts: [{ id: 'seuil', ratio: 0.4 }, { id: 'vo2max', ratio: 0.4 }, { id: 'ef', ratio: 0.2 }, { id: 'leg', ratio: 0.8 }, { id: 'plyo', ratio: 0.8 }, { id: 'co2', ratio: 0.6 }] },
+  { id: 'sprint', name: 'Sprint / Alactique', g: 4, o: 2, impacts: [{ id: 'seuil', ratio: 0.3 }, { id: 'vo2max', ratio: 0.4 }, { id: 'ef', ratio: 0.2 }, { id: 'leg', ratio: 0.8 }, { id: 'plyo', ratio: 0.8 }, { id: 'co2', ratio: 0.6 }] },
   { id: 'pull', name: 'Musculation Pull', g: 4, o: 3 },
   { id: 'push', name: 'Musculation Push', g: 4, o: 3 },
-  { id: 'leg', name: 'Musculation Leg', g: 4, o: 3 },
+  { id: 'leg', name: 'Musculation Leg', g: 4, o: 3 },impacts: [{ id: 'plyo', ratio: 0.3 }, { id: 'sprint', ratio: 0.2 }],
   { id: 'plyo', name: 'Plyométrie', g: 3, o: 2, impacts: [{ id: 'leg', ratio: 0.4 }, { id: 'sprint', ratio: 0.2 }] },
   { id: 'co2', name: 'Tolérance CO2', g: 4, o: 2 },
   { id: 'abdos', name: 'Protocole Abdos', g: 5, o: 3 },
@@ -39,7 +39,7 @@ export function computeCellState(qDef, targetDateStr, eventsForQuality, readines
       
       // On considère qu'une charge de 500 est notre 100% (1.0).
       // On cap l'intensité max à 1.2 (120%) pour éviter des durées aberrantes.
-      const intensity = Math.min(load / 500, 1.2); 
+      const intensity = Math.min(load / 400, 1.2); 
       
       // ALGORITHME DE DIFFUSION ELARGIE
       // Un exposant de 1.3 lisse légèrement la distribution de l'effet
